@@ -2,6 +2,10 @@ local F = require 'f'
 
 require 'which-key'.register {
   ['<leader>g'] = { name = 'git', },
+  ['<leader>g<localleader>'] = { name = 'git.more', },
+
+  ['<leader>g<localleader>sp'] = { function() F.git_create_submodule_public() end, 'git_create_submodule_public', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<localleader>sv'] = { function() F.git_create_submodule_private() end, 'git_create_submodule_private', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gp'] = { function() F.git_pull_recursive() end, 'git_pull_recursive', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<localleader>p'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
