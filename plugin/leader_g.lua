@@ -8,7 +8,7 @@ require 'which-key'.register {
   ['<leader>g<localleader>sv'] = { function() F.git_create_submodule_private() end, 'git_create_submodule_private', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gp'] = { function() F.git_pull_recursive() end, 'git_pull_recursive', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>gP'] = { function() F.git_pull_recursive(true) end, 'git_pull_recursive try clone', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gP'] = { function() F.git_pull_recursive 'clone' end, 'git_pull_recursive try clone', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<localleader>p'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>ga'] = { function() F.git_push_recursive() end, 'git_push_recursive', mode = { 'n', 'v', }, silent = true, },
