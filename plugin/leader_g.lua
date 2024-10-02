@@ -24,8 +24,9 @@ require 'which-key'.register {
   ['<leader>gs'] = { function() F.stage_hunk() end, 'stage_hunk', mode = { 'n', 'v', }, silent = true, },
   ['<leader>gu'] = { function() F.undo_stage_hunk() end, 'undo_stage_hunk', mode = { 'n', 'v', }, silent = true, },
 
-  ['<leader>gd'] = { function() require 'gitsigns'.diffthis() end, 'undo_stage_hunk', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>g<leader>d'] = { function() require 'gitsigns'.diffthis '~1' end, 'undo_stage_hunk', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gd'] = { function() require 'gitsigns'.diffthis() end, 'diffthis', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>d'] = { function() require 'gitsigns'.diffthis '~1' end, 'diffthis ~1', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<localleader>d'] = { function() F.git_diff_sel() end, 'diffthis sel', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gl'] = { function() F.git_lazy() end, 'git_lazy', mode = { 'n', 'v', }, silent = true, },
 }
