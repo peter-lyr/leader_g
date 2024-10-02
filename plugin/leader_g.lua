@@ -1,17 +1,6 @@
 local F = require 'f'
 
 require 'which-key'.register {
-  ['<leader>g'] = { name = 'git', },
-  ['<leader>g<leader>'] = { name = 'git.more', },
-  ['<leader>g<localleader>'] = { name = 'git.more', },
-
-  ['<leader>g<localleader>sp'] = { function() F.git_create_submodule_public() end, 'git_create_submodule_public', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>g<localleader>sv'] = { function() F.git_create_submodule_private() end, 'git_create_submodule_private', mode = { 'n', 'v', }, silent = true, },
-
-  ['<leader>gp'] = { function() F.git_pull_recursive() end, 'git_pull_recursive', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>g<leader>pf'] = { function() F.git_pull_recursive 'clone' end, 'git_pull_recursive try clone', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>g<leader>pc'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
-
   ['<leader>ga'] = { function() F.git_add_commit_push_recursive() end, 'git add commit push recursive', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>ac'] = { function() F.git_add_commit_push() end, 'git add commit push', mode = { 'n', 'v', }, silent = true, },
 
@@ -28,9 +17,24 @@ require 'which-key'.register {
 
   ['<leader>g<leader>ai'] = { function() F.git_add_commit_push_recursive_quick 'line' end, 'git.addcommitpush line', mode = { 'n', 'v', }, silent = true, },
 
-  ['<leader>g<leader>a,a'] = { function() F.git_add_commit_push_recursive_quick 'treesitter1' end, 'git.addcommitpush treesitter1', mode = { 'n', 'v', }, },
-  ['<leader>g<leader>a,b'] = { function() F.git_add_commit_push_recursive_quick 'treesitter2' end, 'git.addcommitpush treesitter2', mode = { 'n', 'v', }, },
-  ['<leader>g<leader>a,c'] = { function() F.git_add_commit_push_recursive_quick 'treesitter3' end, 'git.addcommitpush treesitter3', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<localleader>'] = { name = 'git.addcommitpush.treesitter', },
+  ['<leader>g<leader>a<localleader>a'] = { function() F.git_add_commit_push_recursive_quick 'treesitter1' end, 'git.addcommitpush treesitter1', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<localleader>b'] = { function() F.git_add_commit_push_recursive_quick 'treesitter2' end, 'git.addcommitpush treesitter2', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<localleader>c'] = { function() F.git_add_commit_push_recursive_quick 'treesitter3' end, 'git.addcommitpush treesitter3', mode = { 'n', 'v', }, },
+}
+
+require 'which-key'.register {
+  ['<leader>g'] = { name = 'git', },
+  ['<leader>g<leader>'] = { name = 'git.more', },
+  ['<leader>g<localleader>'] = { name = 'git.more', },
+
+  ['<leader>g<localleader>sp'] = { function() F.git_create_submodule_public() end, 'git_create_submodule_public', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<localleader>sv'] = { function() F.git_create_submodule_private() end, 'git_create_submodule_private', mode = { 'n', 'v', }, silent = true, },
+
+  ['<leader>gp'] = { function() F.git_pull_recursive() end, 'git_pull_recursive', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>pf'] = { function() F.git_pull_recursive 'clone' end, 'git_pull_recursive try clone', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>pc'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
+
 
   ['<leader>gc'] = { function() F.git_commit_push_recursive() end, 'git commit push recursive', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>c'] = { function() F.git_commit_push_recursive_quick 'reghj' end, 'git commit push recursive quick', mode = { 'n', 'v', }, silent = true, },
