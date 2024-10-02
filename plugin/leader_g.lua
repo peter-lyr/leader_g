@@ -28,6 +28,10 @@ require 'which-key'.register {
 
   ['<leader>g<leader>ai'] = { function() F.git_add_commit_push_recursive_quick 'line' end, 'git.addcommitpush line', mode = { 'n', 'v', }, silent = true, },
 
+  ['<leader>g<leader>a,a'] = { function() F.git_add_commit_push_recursive_quick 'treesitter1' end, 'git.addcommitpush treesitter1', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a,b'] = { function() F.git_add_commit_push_recursive_quick 'treesitter2' end, 'git.addcommitpush treesitter2', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a,c'] = { function() F.git_add_commit_push_recursive_quick 'treesitter3' end, 'git.addcommitpush treesitter3', mode = { 'n', 'v', }, },
+
   ['<leader>gc'] = { function() F.git_commit_push_recursive() end, 'git commit push recursive', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>c'] = { function() F.git_commit_push_recursive_quick 'reghj' end, 'git commit push recursive quick', mode = { 'n', 'v', }, silent = true, },
 
