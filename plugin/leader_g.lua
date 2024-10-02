@@ -13,10 +13,19 @@ require 'which-key'.register {
   ['<leader>g<localleader>p'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>ga'] = { function() F.git_add_commit_push_recursive() end, 'git add commit push recursive', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>g<localleader>a'] = { function() F.git_add_commit_push() end, 'git add commit push', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>ac'] = { function() F.git_add_commit_push() end, 'git add commit push', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>a'] = { name = 'git.addcommitpush', },
+  ['<leader>g<leader>ah'] = { function() F.git_add_commit_push_recursive_quick 'regh' end, 'git.addcommitpush regh', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>aj'] = { function() F.git_add_commit_push_recursive_quick 'reghj' end, 'git.addcommitpush reghj', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>ak'] = { function() F.git_add_commit_push_recursive_quick 'reghjk' end, 'git.addcommitpush reghjk', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>al'] = { function() F.git_add_commit_push_recursive_quick 'reghjkl' end, 'git.addcommitpush reghjkl', mode = { 'n', 'v', }, silent = true, },
+
+  ['<leader>g<leader>ae'] = { function() F.git_add_commit_push_recursive_quick 'cword' end, 'git.addcommitpush cword', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>ar'] = { function() F.git_add_commit_push_recursive_quick 'cWORD' end, 'git.addcommitpush cWORD', mode = { 'n', 'v', }, silent = true, },
+
+  ['<leader>g<leader>ay'] = { function() F.git_add_commit_push_recursive_quick 'yanked' end, 'git.addcommitpush yanked', mode = { 'n', 'v', }, silent = true, },
+
   ['<leader>g<leader>ai'] = { function() F.git_add_commit_push_recursive_quick 'line' end, 'git.addcommitpush line', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gc'] = { function() F.git_commit_push_recursive() end, 'git commit push recursive', mode = { 'n', 'v', }, silent = true, },
