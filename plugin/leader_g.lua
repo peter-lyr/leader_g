@@ -13,9 +13,12 @@ require 'which-key'.register {
   ['<leader>g<localleader>p'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>ga'] = { function() F.git_add_commit_push_recursive() end, 'git add commit push recursive', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>a'] = { function() F.git_add_commit_push_recursive_quick 'reghj' end, 'git add commit push reghj', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<localleader>a'] = { function() F.git_add_commit_push() end, 'git add commit push', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gc'] = { function() F.git_commit_push_recursive() end, 'git commit push recursive', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>c'] = { function() F.git_commit_push_recursive_quick 'reghj' end, 'git commit push recursive quick', mode = { 'n', 'v', }, silent = true, },
+
   ['<leader>gP'] = { function() F.git_push_recursive() end, 'git push recursive', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gr'] = { function() F.reset_hunk() end, 'reset_hunk', mode = { 'n', 'v', }, silent = true, },
