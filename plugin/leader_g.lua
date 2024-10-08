@@ -19,6 +19,8 @@ require 'which-key'.register {
 
   ['<leader>g<leader>ai'] = { function() F.git_add_commit_push_recursive_quick 'line' end, 'git.addcommitpush.recursive line', mode = { 'n', 'v', }, silent = true, },
 
+  ['<leader>g<leader>at'] = { function() F.git_add_commit_push_recursive_quick 'tail' end, 'git.addcommitpush.recursive tail', mode = { 'n', 'v', }, silent = true, },
+
   ['<leader>g<leader>a<localleader>'] = { name = 'git.addcommitpush.recursive.treesitter', },
   ['<leader>g<leader>a<localleader>a'] = { function() F.git_add_commit_push_recursive_quick 'treesitter1' end, 'git.addcommitpush.recursive treesitter1', mode = { 'n', 'v', }, },
   ['<leader>g<leader>a<localleader>b'] = { function() F.git_add_commit_push_recursive_quick 'treesitter2' end, 'git.addcommitpush.recursive treesitter2', mode = { 'n', 'v', }, },
@@ -41,6 +43,8 @@ require 'which-key'.register {
   ['<leader>g<leader>cy'] = { function() F.git_commit_push_recursive_quick 'yanked' end, 'git.commitpush.recursive yanked', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>ci'] = { function() F.git_commit_push_recursive_quick 'line' end, 'git.commitpush.recursive line', mode = { 'n', 'v', }, silent = true, },
+
+  ['<leader>g<leader>ct'] = { function() F.git_commit_push_recursive_quick 'tail' end, 'git.commitpush.recursive tail', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>c<localleader>'] = { name = 'git.commitpush.recursive.treesitter', },
   ['<leader>g<leader>c<localleader>a'] = { function() F.git_commit_push_recursive_quick 'treesitter1' end, 'git.commitpush.recursive treesitter1', mode = { 'n', 'v', }, },
