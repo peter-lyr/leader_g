@@ -102,3 +102,8 @@ require 'which-key'.register {
   ['<leader>gvq'] = { function() diffview_close() end, 'git.diffview: close', mode = { 'n', 'v', }, silent = true, },
   ['<leader>gvs'] = { function() diffview_stash() end, 'git.diffview: filehistory stash', mode = { 'n', 'v', }, silent = true, },
 }
+
+require 'which-key'.register {
+  ['<leader>g<leader>x'] = { name = 'git.reset', },
+  ['<leader>g<leader>xj'] = { function() F.git_reset_hard() end, 'git reset --hard', mode = { 'n', 'v', }, silent = true, },
+}
