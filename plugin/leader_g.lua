@@ -1,5 +1,7 @@
 local F = require 'f'
 
+F.lazy_load 'telescope'
+
 require 'which-key'.register {
   ['<leader>ga'] = { function() F.git_add_commit_push_recursive() end, 'git.add_c_p recur', mode = { 'n', 'v', }, silent = true, },
 
@@ -87,4 +89,16 @@ require 'which-key'.register {
   ['<leader>gu'] = { function() F.undo_stage_hunk() end, 'undo_stage_hunk', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gl'] = { function() F.git_lazy() end, 'git_lazy', mode = { 'n', 'v', }, silent = true, },
+}
+
+require 'which-key'.register {
+  ['<leader>gw'] = { ':<c-u>Telescope git_diffs diff_commits<cr>', 'git.diffview: Telescope git_diffs diff_commits', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gv'] = { name = 'git.diffview', },
+  ['<leader>gvl'] = { function() F.diffview_filehistory(1) end, 'git.diffview: filehistory 16', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvm'] = { function() F.diffview_filehistory(2) end, 'git.diffview: filehistory 64', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvf'] = { function() F.diffview_filehistory(3) end, 'git.diffview: filehistory finite', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvr'] = { ':<c-u>DiffviewRefresh<cr>', 'git.diffview: refresh', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvo'] = { function() diffview_open() end, 'git.diffview: open', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvq'] = { function() diffview_close() end, 'git.diffview: close', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvs'] = { function() diffview_stash() end, 'git.diffview: filehistory stash', mode = { 'n', 'v', }, silent = true, },
 }
