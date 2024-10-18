@@ -98,9 +98,9 @@ require 'which-key'.register {
   ['<leader>gvm'] = { function() F.diffview_filehistory(2) end, 'git.diffview: filehistory 64', mode = { 'n', 'v', }, silent = true, },
   ['<leader>gvf'] = { function() F.diffview_filehistory(3) end, 'git.diffview: filehistory finite', mode = { 'n', 'v', }, silent = true, },
   ['<leader>gvr'] = { ':<c-u>DiffviewRefresh<cr>', 'git.diffview: refresh', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>gvo'] = { function() diffview_open() end, 'git.diffview: open', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>gvq'] = { function() diffview_close() end, 'git.diffview: close', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>gvs'] = { function() diffview_stash() end, 'git.diffview: filehistory stash', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvo'] = { function() F.diffview_open() end, 'git.diffview: open', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvq'] = { function() F.diffview_close() end, 'git.diffview: close', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>gvs'] = { function() F.diffview_stash() end, 'git.diffview: filehistory stash', mode = { 'n', 'v', }, silent = true, },
 }
 
 require 'which-key'.register {
