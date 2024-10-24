@@ -18,6 +18,7 @@ require 'which-key'.register {
   ['<leader>g<leader>ar'] = { function() F.git_add_commit_push_recursive_quick 'cWORD' end, 'git.add_c_p.recur cWORD', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>ay'] = { function() F.git_add_commit_push_recursive_quick 'yanked' end, 'git.add_c_p.recur yanked', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>av'] = { function() F.git_add_commit_push_recursive_quick 'clipboard' end, 'git.add_c_p.recur clipboard', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>ai'] = { function() F.git_add_commit_push_recursive_quick 'line' end, 'git.add_c_p.recur line', mode = { 'n', 'v', }, silent = true, },
 
@@ -43,6 +44,7 @@ require 'which-key'.register {
   ['<leader>g<leader>cr'] = { function() F.git_commit_push_recursive_quick 'cWORD' end, 'git.commit_p.recur cWORD', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>cy'] = { function() F.git_commit_push_recursive_quick 'yanked' end, 'git.commit_p.recur yanked', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>cv'] = { function() F.git_commit_push_recursive_quick 'clipboard' end, 'git.commit_p.recur clipboard', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>g<leader>ci'] = { function() F.git_commit_push_recursive_quick 'line' end, 'git.commit_p.recur line', mode = { 'n', 'v', }, silent = true, },
 
