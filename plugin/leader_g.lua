@@ -106,6 +106,10 @@ require 'which-key'.register {
 }
 
 require 'which-key'.register {
+  ['<leader>g<leader>o'] = { function() F.git_archive() end, 'git.archive', mode = { 'n', 'v', }, silent = true, },
+}
+
+require 'which-key'.register {
   ['<leader>g<leader>x'] = { name = 'git.reset', },
   ['<leader>g<leader>xj'] = { function() F.git_reset_hard() end, 'git reset --hard', mode = { 'n', 'v', }, silent = true, },
 }
