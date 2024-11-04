@@ -110,6 +110,11 @@ require 'which-key'.register {
 }
 
 require 'which-key'.register {
+  ['<leader>go'] = { name = 'git.open', },
+  ['<leader>gob'] = { function() F.git_browser() end, 'git_browser', mode = { 'n', 'v', }, silent = true, },
+}
+
+require 'which-key'.register {
   ['<leader>g<leader>x'] = { name = 'git.reset', },
   ['<leader>g<leader>xj'] = { function() F.git_reset_hard() end, 'git reset --hard', mode = { 'n', 'v', }, silent = true, },
 }
