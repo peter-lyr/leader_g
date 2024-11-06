@@ -115,6 +115,11 @@ require 'which-key'.register {
 }
 
 require 'which-key'.register {
+  ['<leader>gi'] = { name = 'git.init', },
+  ['<leader>gij'] = { function() F.just_init() end, 'just_init', mode = { 'n', 'v', }, silent = true, },
+}
+
+require 'which-key'.register {
   ['<leader>g<leader>x'] = { name = 'git.reset', },
   ['<leader>g<leader>xj'] = { function() F.git_reset_hard() end, 'git reset --hard', mode = { 'n', 'v', }, silent = true, },
 }
