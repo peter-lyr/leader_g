@@ -70,7 +70,7 @@ require 'which-key'.register {
   ['<leader>g<leader>p'] = { name = 'git.pull', },
 
   ['<leader>g<leader>pj'] = { function() F.git_pull_recursive 'clone' end, 'git_pull_recursive try clone', mode = { 'n', 'v', }, silent = true, },
-  ['<leader>g<leader>pf'] = { function() F.git_pull_recursive('clone', 'checkout') end, 'git_pull_recursive try clone', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>pf'] = { function() F.git_pull_recursive('clone', 'checkout') end, 'git_pull_recursive checkout try clone', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>pc'] = { function() F.git_pull() end, 'git_pull', mode = { 'n', 'v', }, silent = true, },
 }
 
