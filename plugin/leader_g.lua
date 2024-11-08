@@ -58,9 +58,12 @@ require 'which-key'.register {
 
 require 'which-key'.register {
   ['<leader>g<leader>s'] = { name = 'git.submodule/status/show', },
+  ['<leader>g<leader>s<leader>'] = { name = 'git.submodule/status/show more', },
 
   ['<leader>g<leader>sp'] = { function() F.git_create_submodule_public() end, 'git_create_submodule_public', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>sv'] = { function() F.git_create_submodule_private() end, 'git_create_submodule_private', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>s<leader>p'] = { function() F.git_create_submodule_public_temp() end, 'git_create_submodule_public_temp', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>s<leader>v'] = { function() F.git_create_submodule_private_temp() end, 'git_create_submodule_private_temp', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>ss'] = { function() F.git_status_recursive() end, 'git_status_recursive', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>sc'] = { function() F.git_show_commits() end, 'git_show_commits', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>sd'] = { function() F.git_show_commits 'cwd' end, 'git_show_commits all', mode = { 'n', 'v', }, silent = true, },
