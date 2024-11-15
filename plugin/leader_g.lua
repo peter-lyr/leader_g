@@ -128,5 +128,8 @@ require 'which-key'.register {
 
 require 'which-key'.register {
   ['<leader>g<leader>x'] = { name = 'git.reset', },
+  ['<leader>g<leader>x<leader>'] = { name = 'git.reset.more', },
   ['<leader>g<leader>xj'] = { function() F.git_reset_hard() end, 'git reset --hard', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>x<leader>j'] = { function() F.git_reset_hard_clean_fd() end, 'git reset --hard & clean -fd', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>xc'] = { function() F.git_clean_fd() end, 'git clean -fd', mode = { 'n', 'v', }, silent = true, },
 }
