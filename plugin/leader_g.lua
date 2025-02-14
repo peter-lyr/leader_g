@@ -90,7 +90,9 @@ require 'which-key'.register {
 
 require 'which-key'.register {
   ['<leader>g'] = { name = 'git', },
-  ['<leader>g<leader>'] = { name = 'git.more', },
+  ['<leader>g<leader>'] = { name = 'git.more/gui', },
+
+  ['<leader>g<leader>u'] = { function() F.gui_sel() end, 'gui_sel', mode = { 'n', 'v', }, silent = true, },
 
   ['<leader>gr'] = { function() F.reset_hunk() end, 'reset_hunk', mode = { 'n', }, silent = true, },
   ['<leader>g<leader>r'] = { function() F.git_reset_buffer() end, 'git_reset_buffer', mode = { 'n', 'v', }, silent = true, },
