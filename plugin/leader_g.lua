@@ -67,6 +67,7 @@ require 'which-key'.register {
   ['<leader>g<leader>ss'] = { function() F.git_status_recursive() end, 'git_status_recursive', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>sc'] = { function() F.git_show_commits() end, 'git_show_commits', mode = { 'n', 'v', }, silent = true, },
   ['<leader>g<leader>sd'] = { function() F.git_show_commits 'cwd' end, 'git_show_commits all', mode = { 'n', 'v', }, silent = true, },
+  ['<leader>g<leader>sr'] = { function() F.rename_submodule() end, 'rename_submodule', mode = { 'n', 'v', }, silent = true, },
 }
 
 require 'which-key'.register {
