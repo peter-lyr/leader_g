@@ -24,10 +24,11 @@ require 'which-key'.register {
 
   ['<leader>g<leader>at'] = { function() F.git_add_commit_push_recursive_quick 'tail' end, 'git.add_c_p.recur tail', mode = { 'n', 'v', }, silent = true, },
 
-  ['<leader>g<leader>a<localleader>'] = { name = 'git.add_c_p.recur.treesitter', },
-  ['<leader>g<leader>a<localleader>a'] = { function() F.git_add_commit_push_recursive_quick 'treesitter1' end, 'git.add_c_p.recur treesitter1', mode = { 'n', 'v', }, },
-  ['<leader>g<leader>a<localleader>b'] = { function() F.git_add_commit_push_recursive_quick 'treesitter2' end, 'git.add_c_p.recur treesitter2', mode = { 'n', 'v', }, },
-  ['<leader>g<leader>a<localleader>c'] = { function() F.git_add_commit_push_recursive_quick 'treesitter3' end, 'git.add_c_p.recur treesitter3', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<leader>'] = { name = 'git.add_c_p.recur.treesitter', },
+  ['<leader>g<leader>a<leader>a'] = { function() F.git_add_commit_push_recursive_quick 'treesitter1' end, 'git.add_c_p.recur treesitter1', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<leader>b'] = { function() F.git_add_commit_push_recursive_quick 'treesitter2' end, 'git.add_c_p.recur treesitter2', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<leader>c'] = { function() F.git_add_commit_push_recursive_quick 'treesitter3' end, 'git.add_c_p.recur treesitter3', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>a<leader>d'] = { function() F.git_add_commit_push_recursive_quick 'treesitter3' end, 'git.add_c_p.recur treesitter4', mode = { 'n', 'v', }, },
 }
 
 require 'which-key'.register {
@@ -54,6 +55,7 @@ require 'which-key'.register {
   ['<leader>g<leader>c<leader>a'] = { function() F.git_commit_push_recursive_quick 'treesitter1' end, 'git.commit_p.recur treesitter1', mode = { 'n', 'v', }, },
   ['<leader>g<leader>c<leader>b'] = { function() F.git_commit_push_recursive_quick 'treesitter2' end, 'git.commit_p.recur treesitter2', mode = { 'n', 'v', }, },
   ['<leader>g<leader>c<leader>c'] = { function() F.git_commit_push_recursive_quick 'treesitter3' end, 'git.commit_p.recur treesitter3', mode = { 'n', 'v', }, },
+  ['<leader>g<leader>c<leader>d'] = { function() F.git_commit_push_recursive_quick 'treesitter4' end, 'git.commit_p.recur treesitter4', mode = { 'n', 'v', }, },
 }
 
 require 'which-key'.register {
